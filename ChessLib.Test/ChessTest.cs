@@ -6,7 +6,7 @@ namespace ChessLib.Test
     public class ChessTest
     {
         [Fact]
-        public void Test0()
+        public void Test_0()
         {
             var board = new QueenBoard(5, new int[] { });
 
@@ -14,11 +14,19 @@ namespace ChessLib.Test
         }
 
         [Fact]
-        public void Test1()
+        public void Test_1()
         {
             var board = new QueenBoard(5, new int[] { 0 });
 
             Assert.Equal(12, board.CalculateSafes());
+        }
+
+        [Fact]
+        public void Test_1_in_6()
+        {
+            var board = new QueenBoard(5, new int[] { 6 });
+
+            Assert.Equal(10, board.CalculateSafes());
         }
 
         [Fact]

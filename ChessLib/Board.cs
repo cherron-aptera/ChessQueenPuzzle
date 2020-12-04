@@ -39,7 +39,7 @@ namespace ChessLib
                 // Loop and set threatened squares
 
                 // Diagonals are a bit tricky. Start at the queen location, and then move outwards in each of the 4 directions.
-                for (int diag = 0; diag < 4; diag++)
+                for (int diag = 0; diag <= 4; diag++)
                 {
                     int dx = diag % 2 == 0 ? 1 : -1;
                     int dy = diag <= 2 ? 1 : -1;
